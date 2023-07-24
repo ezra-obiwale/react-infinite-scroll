@@ -1,12 +1,20 @@
-import * as React from 'react'
-import { render } from '@testing-library/react'
+import * as React from 'react';
+import { render } from '@testing-library/react';
 
-import 'jest-canvas-mock'
+import 'jest-canvas-mock';
 
-import { MyCounter } from '../src'
+import { InfiniteScroll } from '../src';
 
 describe('Common render', () => {
+  const fetchData = async (page: number) => {
+    return true;
+  };
+
   it('renders without crashing', () => {
-    render(<MyCounter />)
-  })
-})
+    render(
+        <InfiniteScroll id="test" fetchData={fetchData} url="https://api.publicapis.org/entries">
+          Test scroll content
+        </InfiniteScroll>,
+    );
+  });
+});

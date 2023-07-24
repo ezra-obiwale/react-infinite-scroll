@@ -1,3 +1,2 @@
-import MyCounter from './components/App'
-
-export { MyCounter }
+export { InfiniteScroll } from 'InfiniteScroll';
+export { watchScroll } from 'watchScroll';

@@ -1,0 +1,11 @@
+# for local development
+services:
+  lib:
+    image: dscribe/basic-node
+    build:
+      context: .
+      target: base
+    volumes:
+      - ".:/app"
+    tty: true
+    stdin_open: true
